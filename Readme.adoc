@@ -1,0 +1,102 @@
+:doctype: article
+:lang: en
+:app-name: adoc Studio
+:imagesdir: Media
+:repository-url: https://github.com/projectwizards/adoc-studio-templates
+:app-url: https://adoc-studio.app
+:documentation-url: https://adoc-studio.app/help/
+:!showtitle:
+:source-highlighter:  
+:toclevels: 1
+:!toc-title: 
+:toc: macro
+
+= Styles for {app-name}
+
+image::adoc-studio-logo.png[Logo, align=center, width=30%]
+
+[.text-center.lead]
+*{doctitle}* 
+
+[.text-center]
+_A collection of CSS Styles for adoc Studio._ +
+{app-url}[Explore the website of {app-name} »]
+
+
+== Introduction
+
+Welcome to the {doctitle}! 
+This repository contains a collection of styles for use with adoc Studio on Mac and iPad. 
+All styles are cascading style sheets (CSS).
+
+image::organize-laptop-en.png[Screenshot, align=center, width=100%]
+
+[discrete]
+== Contents
+
+toc::[]
+
+== Features
+
+Description forthcoming…
+
+
+== Purpose
+
+Description forthcoming… 
+
+[.text-center]
+video::g7ZJBNDMgZs[youtube,width=650, height=400, ]
+
+
+=== Built With
+
+{app-url}[{app-name}]::
+Create technical documents in no time at all.
+Use the full range of AsciiDoc – wherever you are.
+
+https://asciidoc.org/[AsciiDoc]::
+AsciiDoc is a plain text markup language for writing technical content. 
+It’s packed with semantic elements and equipped with features to modularize and reuse content. 
+AsciiDoc content can be composed using a text editor, managed in a version control system, and published to multiple output formats.
+
+== Usage
+
+Description forthcoming…
+
+== Discussions
+
+* Everyone is welcome to discuss the content of this repository as well as new ideas and further requests.
+* Please use only https://forum.adoc-studio.app/[this forum]. 
+
+== Roadmap
+* See the {repository-url}/issues[open issues] for a list of proposed features (and known issues).
+* For the roadmap of {app-name} see this https://adoc-studio.canny.io/[website].
+
+
+=== Contributing
+. Clone repo and create a new branch: + 
+`$ git checkout {repository-url} -b name_for_new_branch`
+. Make changes and test.
+. Submit Pull Request with comprehensive description of changes.
+
+
+=== Change Log
+See {repository-url}/commits/main/[CHANGELOG].
+
+
+== License
+* {doctitle} are distributed under the MIT License. See `LICENSE` for more information.
+* {app-name} is copyrighted for ProjectWizards GmbH, Melle, Germany.
+
+
+== Contact
+{app-url}about-us[ProjectWizards GmbH] + 
+Lichtenrader Strasse 11 +
+49324 Melle / Germany +
+Email: office@projectwizards.net
+
+
+=== Acknowledgements
+
+* AsciiDoc® and AsciiDoc Language™ are trademarks of the Eclipse Foundation, Inc.
