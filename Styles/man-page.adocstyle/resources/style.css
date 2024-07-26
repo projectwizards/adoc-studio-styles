@@ -1,0 +1,302 @@
+/* 
+	This is the MANPAGE css stylesheet for adoc Studio.
+	It is based on the Base.css (see info.json) and it may can be also used 
+	as the basis for other factory stylesheets in adoc Studio.
+
+	This css file works as a supplement to the base styles.
+
+	It contains several changes to the base style:
+
+	- it redefines all fonts and colors
+	- it adds new icons for the notes
+	- other minor changes (see the comments)
+	
+	Author: Frank Blome for ProjectWizards GmbH
+	Version: 1.0 from April 17, 2024
+	License: Distributed under the permissive MIT license
+*/
+
+:root {
+	--ads-headline-font: "New York", serif;
+	--ads-body-font: "New York", serif;
+	--ads-quote-font: "New York", serif;
+	--ads-monospaced-font: monospace;
+	--ads-toc-font: var(--ads-body-font);
+	--ads-icon-font-weight: 400;						/* The icon weight for font awesome: 400 or 900 */
+
+	--ads-color: Black;									/* base color for all text */
+	--ads-color-dark: #DDD;								/* dark variant of the base color */
+	--ads-background-color: #ffffff;					/* base color for the background */
+	--ads-background-color-dark: #1e1e1e;				/* dark variant of the background color */
+
+	--ads-headline-color: Black;						/* base color for all headlines */
+	--ads-headline-color-dark: #AAA;					/* dark variant for the headlines */
+	--ads-headline-block-color: Black;					/* headline color for any blocks */
+	--ads-headline-block-color-dark: Silver;			/* dark variant for the block headlines */
+	--ads-headline-small-color: Black;					/* color for small headlines */
+	--ads-headline-small-color-dark: Silver;			/* dark variant for the small headlines */
+
+	--ads-mark-background-color: #ffff00;				/* Text marker with the same in dark mode */
+
+	--ads-a-color: Navy;								/* all kind of links */
+	--ads-a-color-dark: CornflowerBlue;					/* dark variant of the links */
+	--ads-a-hover-color: CornflowerBlue;				/* hover variant of the links */
+	--ads-a-hover-color-dark: Navy;						/* dark variant of links hover */
+		
+	--ads-single-border-color: none;					/* Mainly for single lines */
+	--ads-border-color: rgb(0 0 0 / 0.6);				/* Light variant for some transparent borders */
+	--ads-border-color-dark: rgb(255 255 255 / 0.1);	/* Dark variant for all borders */
+	--ads-details-color: rgb(0 0 0 / 0.85);				/* Some borders needs to be less transparent */ 
+	--ads-details-color-dark: rgb(255 255 255 / 0.85);	/* dark variant of these borders */
+	
+	/* Colors for tables */
+	
+	--ads-table-background-color: #ffffff;					
+	--ads-table-background-color-dark: #212121;			
+	--ads-table-head-background-color: #f7f8f7;
+	--ads-table-head-background-color-dark: #323232;
+	--ads-table-head-alternate-background-color: #f8f8f7;
+	--ads-table-head-alternate-background-color-dark: #f8f8f7;
+	--ads-table-stripes-background-color: #f7f8f7;
+	--ads-table-stripes-background-color-dark: #323232;
+	--ads-linenotable-background-color: none;
+	--ads-linenotable-background-color-dark: none;
+
+	/* Colors for various kinds of blocks */
+	
+	--ads-code-color: rgb(0 0 0 / 0.9);
+	--ads-code-color-dark: rgb(255 255 255 / 0.9);
+	--ads-quote-color: rgb(0 0 0 / 0.85);
+	--ads-quote-color-dark: rgb(255 255 255 / 0.85);
+	--ads-pre-color: green;
+	--ads-pre-color-dark: #eee;
+	--ads-pre-background-color: #f7f7f8;
+	--ads-pre-background-color-dark: #7f7f7f;
+	--ads-exampleblock-background-color: #ffffff;
+	--ads-exampleblock-background-color-dark: #121212;
+	--ads-sidebar-background-color: #f3f3f2;
+	--ads-sidebar-background-color-dark: #3f3f3f;
+	--ads-listingblock-background-color: #f7f7f8;
+	--ads-listingblock-background-color-dark: #7f7f7f;
+	--ads-listingblock-output-background-color: rgb(0 0 0 / 0.9);
+	--ads-listingblock-output-background-color-dark: #7f7f7f;
+
+	/* Colors for the UI elements */
+	
+	--ads-kbd-background-color: #f7f7f7;
+	--ads-kbd-background-color-dark: #bababa;
+	--ads-kbd-color: rgb(0 0 0 / 0.8);
+	--ads-kbd-color-dark: rgb(0 0 0 / 0.8);
+	--ads-keyseq-color: rgb(51 51 51 / 0.8);
+	--ads-keyseq-color-dark: rgb(255 255 255 / 0.1);
+	--ads-menu-color: #000;
+	--ads-menu-color-dark: #eee;
+
+	/* Colors for the Table of contents */
+	
+	--ads-toc-background-color: #f8f8f7;
+	--ads-toc-background-color-dark: #323232;	
+	--ads-toc2-background-color: #f8f8f7;
+	--ads-toc2-background-color-dark: #323232;	
+
+	/* Colors for the Footer */
+	
+	--ads-footer-background-color: rgb(0 0 0 / 0.8);
+	--ads-footer-background-color-dark: rgb(100 100 100 / 0.4);
+
+	/* Colors for Pretty Print */
+	
+	--ads-prettyprint-background-color: #f7f7f8;
+	--ads-prettyprint-background-color-dark: #7f7f7f;
+	--ads-prettyprint-list-background-color: none;
+	--ads-prettyprint-list-background-color-dark: none;
+
+	/*  Admonitions: The background color is unused in the base style.
+		It is prepared for a style similar to Apple Calendar with dark/light colors */
+		
+	--ads-admonitionblock-background-color: inherit;
+	--ads-admonitionblock-background-color-dark: inherit;
+	--ads-note-color: #1962d1;
+	--ads-note-border-color: #1962d1;
+	--ads-note-background-color: #b8d4ff;
+	--ads-tip-color: #ebd005;
+	--ads-tip-border-color: #ebd005;
+	--ads-tip-background-color: #fcf3ae;
+	--ads-warning-color: #fc9803;
+	--ads-warning-border-color: #fc9803;
+	--ads-warning-background-color: #fae1bb;
+	--ads-caution-color: #cf2604;
+	--ads-caution-border-color: #cf2604;
+	--ads-caution-background-color: #fadbd4;
+	--ads-important-color: #800101;
+	--ads-important-border-color: #800101;
+	--ads-important-background-color: #fbd0d0;
+}
+
+/* SIZES & transformations */
+
+p {
+	line-height: 1.35em;
+}
+
+table, 
+dt,
+p {
+	margin-left: 3em;
+}
+
+dd p {
+	margin-left: 5em;
+}
+
+li p {
+	line-height: 1.25em;
+}
+
+ul li {
+	margin-left: -0.75em;
+	list-style-type: "– ";
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h3 {
+	margin-left: 2.7em;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+h4, h5, h6 {
+	margin-left: 3.2em;
+	font-size: 1.0em;
+	font-weight: 400;
+}
+
+
+
+
+/* ADMIONITIONS AS PILLS */
+
+.admonitionblock > table {
+	table-layout: fixed;
+	position: relative;
+	margin-left: 3em;
+	width: 100%;
+}
+
+.admonitionblock td.content {
+	width: 100%;
+	position: relative;
+	padding-top: 2em;
+	left: 2em;
+}
+
+.admonitionblock .icon {					/* Create the Headline */
+	position: absolute;
+	line-height: 1.25em;				
+	text-transform: uppercase;
+}
+
+.admonitionblock .icon i {
+	display: inline-flex;
+	height: 100%;
+}
+
+.admonitionblock .title {					/* Title of admonition */ 
+	font-weight: bold;
+	font-size: 1em;
+	width: 10em;
+	text-align: left;
+}
+
+.admonitionblock .title::after {			/* Title of admonition */ 
+	content: ": ";
+}
+
+.admonitionblock td.icon .icon-note::before {
+	content: "\f075";		/* When Icon is shown */
+	margin-top: -1px;
+	margin-left: -2px;
+	font-size: 0.45em;
+}
+
+.admonitionblock td.icon .icon-tip::before {
+	content: "\f0eb";		/* When Icon is shown */
+	margin-top: -1px;
+	margin-left: -20px;
+	font-size: 0.45em;
+}
+
+.admonitionblock td.icon .icon-warning::before {
+	content: "\f0f3";		/* When Icon is shown */
+	margin-top: -1px;
+	margin-left: -2px;
+	font-size: 0.45em;
+}
+
+.admonitionblock td.icon .icon-caution::before {
+	content: "\f25a";		/* When Icon is shown */
+	margin-top: -1px;
+	margin-left: -2px;
+	font-size: 0.45em;
+}
+
+.admonitionblock td.icon .icon-important::before {
+	content: "\f256";		/* When Icon is shown */
+	margin-top: -1px;
+	margin-left: -2px;
+	font-size: 0.45em;
+}
+
+.admonitionblock .icon i::after { /* When Icon is shown */
+	content: attr(title);
+	margin-left: 3px;
+	margin-top: 1px;
+	font-size: 0.4em;
+	font-family: sans-serif;
+	font-weight: bold;  
+	text-align: left;
+}
+
+.admonitionblock.caution .icon { color: var(--ads-caution-color); }
+.admonitionblock.important .icon { color: var(--ads-important-color); }
+.admonitionblock.note .icon { color: var(--ads-note-color); }
+.admonitionblock.tip .icon { color: var(--ads-tip-color); }
+.admonitionblock.warning .icon { color: var(--ads-warning-color); }
+
+
+
+/* Blocksatz & Silbentrennung bei PDF und Druck */
+
+@media vivliostyle {
+	
+	body {
+		widows: 3;
+		orphans: 3;
+	}
+
+	.tocbase ul > li {
+  		margin-top: 0.2em;
+	}
+
+	.tocbase ul  {
+		margin-left: 0; 
+	}
+
+	.tocbase a::after {
+  		content: leader('.') target-counter(attr(href), page);
+	}
+	
+	.tocbase {
+		border: none !important;
+	}
+	
+	h1 {
+		margin-top: 2px;
+	}
+	
+}
